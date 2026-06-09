@@ -4,37 +4,39 @@ import frame from "../assets/frame.jpg";
 import keychain from "../assets/keychain.jpg";
 
 const products = [
- {
-  id: 1,
-  name: "Hand Painted Shirt",
-  price: "₹799",
-  image: shirt,
-  description:
-    "Unique hand-painted cotton shirt made with fabric colors."
-},
+  {
+    id: 1,
+    name: "Hand Painted Shirt",
+    price: 799,
+    image: shirt,
+    description:
+      "Unique hand-painted cotton shirt made with fabric colors.",
+    category: "shirt",
+  },
   {
     id: 2,
     name: "Tote Bag",
-    price: "₹499",
+    price: 499,
     image: totebag,
     description:
-       "Unique hand-painted tote bag madde with fabric colors."
+      "Unique hand-painted tote bag made with fabric colors.",
+    category: "totebag",
   },
   {
     id: 3,
     name: "Photo Frame",
-    price: "₹699",
+    price: 699,
     image: frame,
-    description:
-       "Mini customized photo frame."
+    description: "Mini customized photo frame.",
+    category: "frame",
   },
   {
     id: 4,
     name: "Key Chain",
-    price: "₹199",
+    price: 199,
     image: keychain,
-    description:
-      "Handmade keychains made with mouldit clay."
+    description: "Handmade keychains made with mouldit clay.",
+    category: "keychain",
   },
 ];
 

@@ -1,32 +1,27 @@
+import { Link } from "react-router-dom";
+
 function Home() {
   return (
-    <>
-      <section className="hero">
-        <h1>Unique Handmade Creations</h1>
+    <div className="hero">
+      <h1>✨ Handmade By Mani ✨</h1>
 
-        <p>
-          Hand-painted shirts, tote bags,
-          keychains and custom gifts.
-        </p>
+      <p>
+        Hand-Painted Shirts, Tote Bags,
+        Photo Frames & Personalized Gifts
+      </p>
 
-        <button>Shop Now</button>
-      </section>
+      <Link to="/shop">
+        <button className="shop-btn">
+          Shop Now
+        </button>
+      </Link>
 
-      <section className="categories">
-        <h2>Categories</h2>
-
-        <div className="category-grid">
-          <div className="category-card">👕 Shirts</div>
-          <div className="category-card">👜 Tote Bags</div>
-          <div className="category-card">🖼️ Photo Frames</div>
-          <div className="category-card">🔑 Key Chains</div>
-        </div>
-      </section>
-
-      <h2 style={{ textAlign: "center" }}>
-        Featured Products
-      </h2>
-    </>
+      <div className="features">
+        <div>🎨 Handcrafted Designs</div>
+        <div>💝 Personalized Gifts</div>
+        <div>🚚 Pan India Delivery</div>
+      </div>
+    </div>
   );
 }
 
