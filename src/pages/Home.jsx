@@ -1,26 +1,50 @@
-import { Link } from "react-router-dom";
-
 function Home() {
   return (
-    <div className="hero">
-      <h1>✨ Handmade By Mani ✨</h1>
+    <div>
+      <h1>Welcome to Aarkriti</h1>
 
       <p>
-        Hand-Painted Shirts, Tote Bags,
-        Photo Frames & Personalized Gifts
+        Handmade • Customized • Made with Love
       </p>
 
-      <Link to="/shop">
-        <button className="shop-btn">
-          Shop Now
-        </button>
-      </Link>
+      {/* ABOUT SECTION */}
 
-      <div className="features">
-        <div>🎨 Handcrafted Designs</div>
-        <div>💝 Personalized Gifts</div>
-        <div>🚚 Pan India Delivery</div>
-      </div>
+      <section
+        style={{
+          maxWidth: "900px",
+          margin: "50px auto",
+          padding: "30px",
+          background: "#fff",
+          borderRadius: "15px",
+          boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
+          lineHeight: "1.8",
+        }}
+      >
+        <h2>About Aarkriti</h2>
+
+        <p>
+          Welcome to Aarkriti, a creative space where art,
+          imagination, and craftsmanship come together.
+        </p>
+
+        <p>
+          Hi, I'm Manisree, the creator behind Aarkriti.
+          Every product you see here is designed with care,
+          creativity, and attention to detail.
+        </p>
+
+        <p>
+          From hand-painted shirts and tote bags to
+          customized frames, keychains, and personalized
+          gifts, each creation is made to tell a unique
+          story.
+        </p>
+
+        <p>
+          Thank you for supporting handmade art and being
+          part of this creative journey.
+        </p>
+      </section>
     </div>
   );
 }
