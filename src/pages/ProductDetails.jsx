@@ -14,6 +14,12 @@ function ProductDetails() {
 
   const [showQR, setShowQR] = useState(false);
 
+  const [showQR, setShowQR] = useState(false);
+
+const [customerName, setCustomerName] = useState("");
+const [customerPhone, setCustomerPhone] = useState("");
+const [customerEmail, setCustomerEmail] = useState("");
+
   const product = products.find(
     (p) => p.id === Number(id)
   );
@@ -25,11 +31,15 @@ function ProductDetails() {
   const whatsappNumber = "917207591419";
 
   const paymentMessage =
-    `Hello Aarkriti! 🌸%0A%0A` +
-    `I have completed payment for:%0A%0A` +
-    `Product: ${product.name}%0A` +
-    `Price: ₹${product.price}%0A%0A` +
-    `Please find my payment screenshot attached.%0A%0AThank you!`;
+  `Hello Aarkriti! 🌸%0A%0A` +
+  `Name: ${customerName}%0A` +
+  `Phone: ${customerPhone}%0A` +
+  `Email: ${customerEmail}%0A%0A` +
+  `Product: ${product.name}%0A` +
+  `Price: ₹${product.price}%0A%0A` +
+  `I have completed payment.%0A` +
+  `Please find my payment screenshot attached.%0A%0A` +
+  `Thank you!`;
 
   return (
     <div
@@ -79,6 +89,43 @@ function ProductDetails() {
       >
         Buy Now
       </button>
+
+
+    <input
+  type="text"
+  placeholder="Your Name"
+  value={customerName}
+  onChange={(e) => setCustomerName(e.target.value)}
+  style={{
+    width: "100%",
+    padding: "12px",
+    marginBottom: "10px",
+  }}
+/>
+
+<input
+  type="text"
+  placeholder="Phone Number"
+  value={customerPhone}
+  onChange={(e) => setCustomerPhone(e.target.value)}
+  style={{
+    width: "100%",
+    padding: "12px",
+    marginBottom: "10px",
+  }}
+/>
+
+<input
+  type="email"
+  placeholder="Email Address"
+  value={customerEmail}
+  onChange={(e) => setCustomerEmail(e.target.value)}
+  style={{
+    width: "100%",
+    padding: "12px",
+    marginBottom: "20px",
+  }}
+/>
 
       {showQR && (
         <div
