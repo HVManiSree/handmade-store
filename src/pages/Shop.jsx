@@ -47,7 +47,6 @@ function Shop() {
       >
         <option value="all">All Categories</option>
         <option value="shirt">Shirts</option>
-        <option value="totebag">Tote Bags</option>
         <option value="frame">Photo Frames</option>
         <option value="keychain">Key Chains</option>
       </select>
