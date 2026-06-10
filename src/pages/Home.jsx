@@ -1,18 +1,49 @@
+import founderImage from "../assets/founder.png";
+
 function Home() {
   return (
-    <div>
-      <h1>Welcome to Aarkriti</h1>
+    <div style={{ padding: "20px" }}>
 
-      <p>
-        Handmade • Customized • Made with Love
-      </p>
+      {/* Founder Section */}
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: "30px",
+          marginBottom: "50px",
+        }}
+      >
+        <img
+          src={founderImage}
+          alt="Founder"
+          style={{
+            width: "220px",
+            height: "220px",
+            borderRadius: "50%",
+            objectFit: "cover",
+            boxShadow: "0 6px 20px rgba(0,0,0,0.2)",
+            border: "5px solid white",
+          }}
+        />
 
-      {/* ABOUT SECTION */}
+        <h1 style={{ marginTop: "20px" }}>
+          Manisree
+        </h1>
 
+        <p
+          style={{
+            color: "#666",
+            fontSize: "18px",
+          }}
+        >
+          Founder of Aarkriti
+        </p>
+      </div>
+
+      {/* About Section */}
       <section
         style={{
           maxWidth: "900px",
-          margin: "50px auto",
+          margin: "0 auto",
           padding: "30px",
           background: "#fff",
           borderRadius: "15px",
@@ -41,10 +72,18 @@ function Home() {
         </p>
 
         <p>
+          My goal is to transform simple ideas into
+          meaningful handmade creations that bring joy,
+          preserve memories, and make every occasion
+          special.
+        </p>
+
+        <p>
           Thank you for supporting handmade art and being
           part of this creative journey.
         </p>
       </section>
+
     </div>
   );
 }
