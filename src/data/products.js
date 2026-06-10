@@ -1,5 +1,4 @@
 import shirt from "../assets/shirt.jpg";
-import totebag from "../assets/totebag.jpg";
 import frame from "../assets/frame.jpg";
 import keychain from "../assets/keychain.jpg";
 
@@ -15,15 +14,6 @@ const products = [
   },
   {
     id: 2,
-    name: "Tote Bag",
-    price: 499,
-    image: totebag,
-    description:
-      "Unique hand-painted tote bag made with fabric colors.",
-    category: "totebag",
-  },
-  {
-    id: 3,
     name: "Photo Frame",
     price: 699,
     image: frame,
@@ -31,7 +21,7 @@ const products = [
     category: "frame",
   },
   {
-    id: 4,
+    id: 3,
     name: "Key Chain",
     price: 199,
     image: keychain,

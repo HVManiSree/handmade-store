@@ -125,9 +125,6 @@ function Admin() {
         <option value="shirt">
           Shirt
         </option>
-        <option value="totebag">
-          Tote Bag
-        </option>
         <option value="frame">
           Photo Frame
         </option>

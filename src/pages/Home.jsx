@@ -145,7 +145,6 @@ function Home() {
       >
         {[
           "🎨 Hand-Painted Shirts",
-          "👜 Tote Bags",
           "🖼️ Photo Frames",
           "🔑 Keychains",
         ].map((item) => (
