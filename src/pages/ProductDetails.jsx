@@ -1,8 +1,19 @@
 import { useParams } from "react-router-dom";
-import { useContext, useState } from "react";
+import {
+  useContext,
+  useState,
+  useEffect,
+} from "react";
 
 import { ProductContext } from "../context/ProductContext";
 import { CartContext } from "../context/CartContext";
+
+import { db } from "../firebase";
+
+import {
+  collection,
+  getDocs,
+} from "firebase/firestore";
 
 import qrImage from "../assets/qr.jpeg";
 
@@ -18,15 +29,52 @@ function ProductDetails() {
   const [customerPhone, setCustomerPhone] = useState("");
   const [customerEmail, setCustomerEmail] = useState("");
 
+  const [reviews, setReviews] = useState([]);
+
   const product = products.find(
     (p) => p.id === Number(id)
   );
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const querySnapshot = await getDocs(
+          collection(db, "review")
+        );
+
+        const reviewsData = [];
+
+        querySnapshot.forEach((doc) => {
+          const data = doc.data();
+
+          if (
+            data.productId === Number(id) &&
+            data.approved === true
+          ) {
+            reviewsData.push(data);
+          }
+        });
+
+        setReviews(reviewsData);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchReviews();
+  }, [id]);
 
   if (!product) {
     return <h1>Product Not Found</h1>;
   }
 
   const whatsappNumber = "917207591419";
+
+  const whatsappOrderMessage =
+    `Hello Aarkriti! 🌸%0A%0A` +
+    `I would like to order:%0A%0A` +
+    `${product.name}%0A` +
+    `Price: ₹${product.price}`;
 
   const paymentMessage =
     `Hello Aarkriti! 🌸%0A%0A` +
@@ -38,12 +86,6 @@ function ProductDetails() {
     `I have completed payment.%0A` +
     `Please find my payment screenshot attached.%0A%0A` +
     `Thank you!`;
-
-  const whatsappOrderMessage =
-    `Hello Aarkriti! 🌸%0A%0A` +
-    `I would like to order:%0A%0A` +
-    `${product.name}%0A` +
-    `Price: ₹${product.price}`;
 
   return (
     <div
@@ -186,8 +228,9 @@ function ProductDetails() {
           </p>
 
           <p>
-            After payment, click the button below and
-            send the payment screenshot on WhatsApp.
+            After payment, click the button below
+            and send your payment screenshot on
+            WhatsApp.
           </p>
 
           <a
@@ -212,6 +255,44 @@ function ProductDetails() {
           </a>
         </div>
       )}
+
+      {/* REVIEWS SECTION */}
+
+      <div
+        style={{
+          marginTop: "50px",
+          textAlign: "left",
+        }}
+      >
+        <h2>Customer Reviews ⭐</h2>
+
+        {reviews.length === 0 ? (
+          <p>No reviews yet.</p>
+        ) : (
+          reviews.map((review, index) => (
+            <div
+              key={index}
+              style={{
+                background: "white",
+                border: "1px solid #ddd",
+                borderRadius: "10px",
+                padding: "15px",
+                marginBottom: "15px",
+              }}
+            >
+              <h4>{review.name}</h4>
+
+              <p>
+                {"⭐".repeat(
+                  Number(review.rating)
+                )}
+              </p>
+
+              <p>{review.review}</p>
+            </div>
+          ))
+        )}
+      </div>
     </div>
   );
 }
