@@ -11,6 +11,7 @@ import ProductDetails from "./pages/ProductDetails";
 import Checkout from "./pages/Checkout";
 import Admin from "./pages/Admin";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       </Routes>
 
       <Footer/>
+      <WhatsAppButton/>
     </BrowserRouter>
   );
 }
