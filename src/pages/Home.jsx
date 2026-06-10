@@ -181,6 +181,77 @@ function Home() {
         <p>✓ Premium Quality Materials</p>
         <p>✓ Crafted with Love</p>
       </div>
+            {/* TESTIMONIALS */}
+
+      <div
+        style={{
+          marginTop: "60px",
+          textAlign: "center",
+        }}
+      >
+        <h2>What Our Customers Say</h2>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(250px, 1fr))",
+            gap: "20px",
+            marginTop: "25px",
+          }}
+        >
+          <div
+            style={{
+              background: "white",
+              padding: "25px",
+              borderRadius: "15px",
+              boxShadow:
+                "0 4px 15px rgba(0,0,0,0.08)",
+            }}
+          >
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>
+              Beautiful customization and amazing
+              attention to detail. Loved my order!
+            </p>
+            <strong>- Happy Customer</strong>
+          </div>
+
+          <div
+            style={{
+              background: "white",
+              padding: "25px",
+              borderRadius: "15px",
+              boxShadow:
+                "0 4px 15px rgba(0,0,0,0.08)",
+            }}
+          >
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>
+              The hand-painted artwork was even
+              better than expected.
+            </p>
+            <strong>- Art Lover</strong>
+          </div>
+
+          <div
+            style={{
+              background: "white",
+              padding: "25px",
+              borderRadius: "15px",
+              boxShadow:
+                "0 4px 15px rgba(0,0,0,0.08)",
+            }}
+          >
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>
+              Unique, creative, and made with
+              love. Perfect for gifting.
+            </p>
+            <strong>- Satisfied Customer</strong>
+          </div>
+        </div>
+      </div>
 
     </div>
   );
