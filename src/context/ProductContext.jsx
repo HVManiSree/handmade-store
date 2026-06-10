@@ -4,15 +4,8 @@ import productsData from "../data/products";
 export const ProductContext = createContext();
 
 export function ProductProvider({ children }) {
-  const [products, setProducts] = useState(() => {
-    const savedProducts =
-      localStorage.getItem("products");
-
-    return savedProducts
-      ? JSON.parse(savedProducts)
-      : productsData;
-  });
-
+const [products, setProducts] =
+  useState(productsData);
   useEffect(() => {
     localStorage.setItem(
       "products",
