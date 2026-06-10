@@ -8,7 +8,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <h2>Handmade By Mani</h2>
+      <h2>Aarkriti</h2>
 
       <div className="nav-links">
         <Link to="/">Home</Link>

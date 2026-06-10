@@ -8,7 +8,7 @@ function Footer() {
         background: "#f5f5f5",
       }}
     >
-      <p>© 2026 Handmade By Mani</p>
+      <p>© 2026 Aarkriti</p>
       <p>Handmade with ❤️</p>
     </footer>
   );
