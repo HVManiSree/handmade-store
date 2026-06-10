@@ -31,7 +31,7 @@ function Navbar() {
         <h2
           style={{
             margin: 0,
-            color: "#ec81b6",
+            color: "#b76034",
           }}
         >
           Aarkriti

@@ -18,7 +18,7 @@ function Home() {
         <h1
           style={{
             fontSize: "3rem",
-            color: "#d63384",
+            color: "#b76034",
             marginBottom: "10px",
           }}
         >
@@ -38,7 +38,7 @@ function Home() {
         <a
           href="/shop"
           style={{
-            background: "#d63384",
+            background: "#b76034",
             color: "white",
             padding: "12px 25px",
             borderRadius: "30px",
