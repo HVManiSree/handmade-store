@@ -13,7 +13,7 @@ const products = [
     category: "shirt",
   },
   {
-    id: 2,
+    id: 3,
     name: "Photo Frame",
     price: 699,
     image: frame,
@@ -21,7 +21,7 @@ const products = [
     category: "frame",
   },
   {
-    id: 3,
+    id: 4,
     name: "Key Chain",
     price: 199,
     image: keychain,
