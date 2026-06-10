@@ -14,11 +14,9 @@ function ProductDetails() {
 
   const [showQR, setShowQR] = useState(false);
 
-  const [showQR, setShowQR] = useState(false);
-
-const [customerName, setCustomerName] = useState("");
-const [customerPhone, setCustomerPhone] = useState("");
-const [customerEmail, setCustomerEmail] = useState("");
+  const [customerName, setCustomerName] = useState("");
+  const [customerPhone, setCustomerPhone] = useState("");
+  const [customerEmail, setCustomerEmail] = useState("");
 
   const product = products.find(
     (p) => p.id === Number(id)
@@ -31,15 +29,21 @@ const [customerEmail, setCustomerEmail] = useState("");
   const whatsappNumber = "917207591419";
 
   const paymentMessage =
-  `Hello Aarkriti! 🌸%0A%0A` +
-  `Name: ${customerName}%0A` +
-  `Phone: ${customerPhone}%0A` +
-  `Email: ${customerEmail}%0A%0A` +
-  `Product: ${product.name}%0A` +
-  `Price: ₹${product.price}%0A%0A` +
-  `I have completed payment.%0A` +
-  `Please find my payment screenshot attached.%0A%0A` +
-  `Thank you!`;
+    `Hello Aarkriti! 🌸%0A%0A` +
+    `Name: ${customerName}%0A` +
+    `Phone: ${customerPhone}%0A` +
+    `Email: ${customerEmail}%0A%0A` +
+    `Product: ${product.name}%0A` +
+    `Price: ₹${product.price}%0A%0A` +
+    `I have completed payment.%0A` +
+    `Please find my payment screenshot attached.%0A%0A` +
+    `Thank you!`;
+
+  const whatsappOrderMessage =
+    `Hello Aarkriti! 🌸%0A%0A` +
+    `I would like to order:%0A%0A` +
+    `${product.name}%0A` +
+    `Price: ₹${product.price}`;
 
   return (
     <div
@@ -76,56 +80,35 @@ const [customerEmail, setCustomerEmail] = useState("");
         Add To Cart
       </button>
 
+      <a
+        href={`https://wa.me/${whatsappNumber}?text=${whatsappOrderMessage}`}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <button
+          style={{
+            padding: "12px 20px",
+            marginRight: "10px",
+            cursor: "pointer",
+          }}
+        >
+          Order on WhatsApp
+        </button>
+      </a>
+
       <button
         onClick={() => setShowQR(true)}
         style={{
           padding: "12px 20px",
-          cursor: "pointer",
           background: "#b76034",
           color: "white",
           border: "none",
           borderRadius: "8px",
+          cursor: "pointer",
         }}
       >
         Buy Now
       </button>
-
-
-    <input
-  type="text"
-  placeholder="Your Name"
-  value={customerName}
-  onChange={(e) => setCustomerName(e.target.value)}
-  style={{
-    width: "100%",
-    padding: "12px",
-    marginBottom: "10px",
-  }}
-/>
-
-<input
-  type="text"
-  placeholder="Phone Number"
-  value={customerPhone}
-  onChange={(e) => setCustomerPhone(e.target.value)}
-  style={{
-    width: "100%",
-    padding: "12px",
-    marginBottom: "10px",
-  }}
-/>
-
-<input
-  type="email"
-  placeholder="Email Address"
-  value={customerEmail}
-  onChange={(e) => setCustomerEmail(e.target.value)}
-  style={{
-    width: "100%",
-    padding: "12px",
-    marginBottom: "20px",
-  }}
-/>
 
       {showQR && (
         <div
@@ -137,7 +120,52 @@ const [customerEmail, setCustomerEmail] = useState("");
             background: "#fffaf7",
           }}
         >
-          <h2>Scan QR Code to Pay</h2>
+          <h2>Complete Your Payment</h2>
+
+          <input
+            type="text"
+            placeholder="Your Name"
+            value={customerName}
+            onChange={(e) =>
+              setCustomerName(e.target.value)
+            }
+            style={{
+              width: "100%",
+              padding: "12px",
+              marginBottom: "10px",
+              boxSizing: "border-box",
+            }}
+          />
+
+          <input
+            type="text"
+            placeholder="Phone Number"
+            value={customerPhone}
+            onChange={(e) =>
+              setCustomerPhone(e.target.value)
+            }
+            style={{
+              width: "100%",
+              padding: "12px",
+              marginBottom: "10px",
+              boxSizing: "border-box",
+            }}
+          />
+
+          <input
+            type="email"
+            placeholder="Email Address"
+            value={customerEmail}
+            onChange={(e) =>
+              setCustomerEmail(e.target.value)
+            }
+            style={{
+              width: "100%",
+              padding: "12px",
+              marginBottom: "20px",
+              boxSizing: "border-box",
+            }}
+          />
 
           <img
             src={qrImage}
@@ -154,8 +182,12 @@ const [customerEmail, setCustomerEmail] = useState("");
               fontWeight: "bold",
             }}
           >
-            Complete the payment and then send
-            the payment screenshot on WhatsApp.
+            Scan the QR code and complete your payment.
+          </p>
+
+          <p>
+            After payment, click the button below and
+            send the payment screenshot on WhatsApp.
           </p>
 
           <a
