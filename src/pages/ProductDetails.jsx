@@ -140,6 +140,28 @@ function ProductDetails() {
 
       <p>{product.description}</p>
 
+     {product.instagram && (
+  <a
+    href={product.instagram}
+    target="_blank"
+    rel="noreferrer"
+  >
+    <button
+      style={{
+        background: "#aa5a2f",
+        color: "white",
+        border: "none",
+        padding: "12px 20px",
+        borderRadius: "8px",
+        cursor: "pointer",
+        marginBottom: "20px",
+      }}
+    >
+      📸 View on Instagram
+    </button>
+  </a>
+)}
+
       <button
         onClick={() => addToCart(product)}
         style={{
@@ -151,21 +173,6 @@ function ProductDetails() {
         Add To Cart
       </button>
 
-      <a
-        href={`https://wa.me/${whatsappNumber}?text=${whatsappOrderMessage}`}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <button
-          style={{
-            padding: "12px 20px",
-            marginRight: "10px",
-            cursor: "pointer",
-          }}
-        >
-          Order on WhatsApp
-        </button>
-      </a>
 
       <button
         onClick={() => setShowQR(true)}

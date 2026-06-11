@@ -28,6 +28,8 @@ const products = [
     image: keychain,
     description: "Handmade keychains made with mouldit clay.",
     category: "keychain",
+    instagram : "https://www.instagram.com/reel/DNwAVFO5ixX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+
   },
     {
       id: 5,
