@@ -12,6 +12,7 @@ const products = [
     description:
       "Unique hand-painted cotton shirt made with fabric colors.",
     category: "shirt",
+    instagram: "https://www.instagram.com/p/DLfioj1SXl5/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     id: 3,
@@ -20,6 +21,7 @@ const products = [
     image: frame,
     description: "Mini customized photo frame.",
     category: "frame",
+    instagram : "https://www.instagram.com/p/DK2T-dgS5_h/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     id: 4,
@@ -38,6 +40,7 @@ const products = [
       image: slate,
      description: "Hand-painted customized slate for Aksharabhyasam ceremonies.",
   category: "slate",
+  instagram : "https://www.instagram.com/p/DYR8qZUCb-q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
 },
 ];
 

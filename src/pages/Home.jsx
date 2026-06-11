@@ -144,9 +144,9 @@ function Home() {
         }}
       >
         {[
-          "🎨 Hand-Painted Shirts",
-          "🖼️ Photo Frames",
-          "🔑 Keychains",
+          " Hand-Painted Shirts",
+          " Photo Frames",
+          " Keychains",
         ].map((item) => (
           <div
             key={item}
