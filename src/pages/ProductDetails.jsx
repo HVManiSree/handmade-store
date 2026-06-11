@@ -13,6 +13,7 @@ import { db } from "../firebase";
 import {
   collection,
   getDocs,
+  addDoc,
 } from "firebase/firestore";
 
 import qrImage from "../assets/qr.jpeg";
@@ -30,6 +31,10 @@ function ProductDetails() {
   const [customerEmail, setCustomerEmail] = useState("");
 
   const [reviews, setReviews] = useState([]);
+  
+  const [reviewName, setReviewName] = useState("");
+  const [reviewRating, setReviewRating] = useState(5);
+  const [reviewText, setReviewText] = useState(""); 
 
   const product = products.find(
     (p) => p.id === Number(id)
@@ -86,7 +91,31 @@ function ProductDetails() {
     `I have completed payment.%0A` +
     `Please find my payment screenshot attached.%0A%0A` +
     `Thank you!`;
+  
+    const submitReview = async () => {
+  try {
+    await addDoc(
+      collection(db, "review"),
+      {
+        productId: Number(id),
+        name: reviewName,
+        rating: Number(reviewRating),
+        review: reviewText,
+        approved: false,
+      }
+    );
 
+    alert(
+      "Thank you! Your review has been sent for approval."
+    );
+
+    setReviewName("");
+    setReviewRating(5);
+    setReviewText("");
+  } catch (error) {
+    console.log(error);
+  }
+}; 
   return (
     <div
       style={{
@@ -257,7 +286,7 @@ function ProductDetails() {
       )}
 
       {/* REVIEWS SECTION */}
-
+    <h2>Customer Reviews ⭐</h2>
       <div
         style={{
           marginTop: "50px",
@@ -265,6 +294,78 @@ function ProductDetails() {
         }}
       >
         <h2>Customer Reviews ⭐</h2>
+        <div
+  style={{
+    background: "#fffaf7",
+    padding: "20px",
+    borderRadius: "15px",
+    marginBottom: "30px",
+  }}
+>
+  <h3>Write a Review</h3>
+
+  <input
+    type="text"
+    placeholder="Your Name"
+    value={reviewName}
+    onChange={(e) =>
+      setReviewName(e.target.value)
+    }
+    style={{
+      width: "100%",
+      padding: "10px",
+      marginBottom: "10px",
+      boxSizing: "border-box",
+    }}
+  />
+
+  <select
+    value={reviewRating}
+    onChange={(e) =>
+      setReviewRating(e.target.value)
+    }
+    style={{
+      width: "100%",
+      padding: "10px",
+      marginBottom: "10px",
+    }}
+  >
+    <option value="5">⭐⭐⭐⭐⭐</option>
+    <option value="4">⭐⭐⭐⭐</option>
+    <option value="3">⭐⭐⭐</option>
+    <option value="2">⭐⭐</option>
+    <option value="1">⭐</option>
+  </select>
+
+  <textarea
+    placeholder="Write your review..."
+    value={reviewText}
+    onChange={(e) =>
+      setReviewText(e.target.value)
+    }
+    rows="4"
+    style={{
+      width: "100%",
+      padding: "10px",
+      marginBottom: "10px",
+      boxSizing: "border-box",
+    }}
+  />
+
+  <button
+    onClick={submitReview}
+    style={{
+      background: "#b76034",
+      color: "white",
+      border: "none",
+      padding: "12px 20px",
+      borderRadius: "8px",
+      cursor: "pointer",
+    }}
+  >
+    Submit Review
+  </button>
+</div>
 
         {reviews.length === 0 ? (
           <p>No reviews yet.</p>

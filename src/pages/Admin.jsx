@@ -1,5 +1,18 @@
-import { useContext, useState } from "react";
+import {
+  useContext,
+  useState,
+  useEffect,
+} from "react";
 import { ProductContext } from "../context/ProductContext";
+import { db } from "../firebase";
+
+import {
+  collection,
+  getDocs,
+  doc,
+  updateDoc,
+  deleteDoc,
+} from "firebase/firestore";
 
 function Admin() {
   const {
@@ -20,6 +33,33 @@ function Admin() {
     useState("shirt");
   const [description, setDescription] =
     useState("");
+    const [pendingReviews, setPendingReviews] =
+  useState([]);
+
+useEffect(() => {
+  const fetchReviews = async () => {
+    const querySnapshot = await getDocs(
+      collection(db, "review")
+    );
+
+    const reviews = [];
+
+    querySnapshot.forEach((docSnap) => {
+      const data = docSnap.data();
+
+      if (!data.approved) {
+        reviews.push({
+          id: docSnap.id,
+          ...data,
+        });
+      }
+    });
+
+    setPendingReviews(reviews);
+  };
+
+  fetchReviews();
+}, []);
 
   if (!isLoggedIn) {
     return (
@@ -66,6 +106,37 @@ function Admin() {
     );
   }
 
+  const approveReview = async (
+  reviewId
+) => {
+  await updateDoc(
+    doc(db, "review", reviewId),
+    {
+      approved: true,
+    }
+  );
+
+  setPendingReviews(
+    pendingReviews.filter(
+      (review) =>
+        review.id !== reviewId
+    )
+  );
+};
+const deleteReview = async (
+  reviewId
+) => {
+  await deleteDoc(
+    doc(db, "review", reviewId)
+  );
+
+  setPendingReviews(
+    pendingReviews.filter(
+      (review) =>
+        review.id !== reviewId
+    )
+  );
+};
   const handleSubmit = () => {
     if (!name || !price) {
       alert("Please fill all required fields");
@@ -195,6 +266,53 @@ function Admin() {
           </button>
         </div>
       ))}
+  <hr />
+
+<h2>Pending Reviews</h2>
+
+{pendingReviews.length === 0 ? (
+  <p>No pending reviews.</p>
+) : (
+  pendingReviews.map((review) => (
+    <div
+      key={review.id}
+      style={{
+        border: "1px solid #ddd",
+        padding: "15px",
+        borderRadius: "10px",
+        marginBottom: "15px",
+      }}
+    >
+      <h3>{review.name}</h3>
+
+      <p>
+        {"⭐".repeat(review.rating)}
+      </p>
+
+      <p>{review.review}</p>
+
+      <button
+        onClick={() =>
+          approveReview(review.id)
+        }
+        style={{
+          marginRight: "10px",
+        }}
+      >
+        Approve
+      </button>
+
+      <button
+        onClick={() =>
+          deleteReview(review.id)
+        }
+      >
+        Delete
+      </button>
+    </div>
+  ))
+)}
+
     </div>
   );
 }
