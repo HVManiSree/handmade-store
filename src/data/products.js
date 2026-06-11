@@ -1,7 +1,7 @@
 import shirt from "../assets/shirt.jpg";
 import frame from "../assets/frame.jpg";
 import keychain from "../assets/keychain.jpg";
-import slate from "../assets/slate.jpg";
+import slate from "../assets/slate.png";
 
 const products = [
   {
