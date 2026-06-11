@@ -245,29 +245,16 @@ function ProductDetails() {
             }}
           />
 
-          <img
-            src={qrImage}
-            alt="Payment QR"
-            style={{
-              width: "250px",
-              borderRadius: "12px",
-            }}
-          />
-
           <p
             style={{
               marginTop: "15px",
               fontWeight: "bold",
             }}
-          >
-            Scan the QR code and complete your payment.
-          </p>
+          > </p>
 
           <p>
-            After payment, click the button below
-            and send your payment screenshot on
-            WhatsApp.
-          </p>
+            Enter the above details and click the button below
+            for ordering via whatsapp  </p>
 
           <a
             href={`https://wa.me/${whatsappNumber}?text=${paymentMessage}`}
@@ -278,7 +265,7 @@ function ProductDetails() {
               style={{
                 marginTop: "15px",
                 padding: "12px 25px",
-                background: "#25d366",
+                background: "#4bac6e",
                 color: "white",
                 border: "none",
                 borderRadius: "8px",
@@ -286,7 +273,7 @@ function ProductDetails() {
                 fontWeight: "bold",
               }}
             >
-              I've Paid
+              Order now on whatsapp 
             </button>
           </a>
         </div>
