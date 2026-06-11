@@ -49,6 +49,7 @@ function Shop() {
         <option value="shirt">Shirts</option>
         <option value="frame">Photo Frames</option>
         <option value="keychain">Key Chains</option>
+        <option value="slate">Slate</option>
       </select>
 
       <div className="products">

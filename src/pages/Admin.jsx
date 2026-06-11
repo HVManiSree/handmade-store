@@ -202,6 +202,9 @@ const deleteReview = async (
         <option value="keychain">
           Key Chain
         </option>
+        <option value="slate">
+          Slate
+        </option>
       </select>
 
       <br />
