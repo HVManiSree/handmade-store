@@ -88,8 +88,8 @@ function ProductDetails() {
     `Email: ${customerEmail}%0A%0A` +
     `Product: ${product.name}%0A` +
     `Price: ₹${product.price}%0A%0A` +
-    `I have completed payment.%0A` +
-    `Please find my payment screenshot attached.%0A%0A` +
+    `I want this product.%0A` +
+    `Please send the qr for payment.%0A%0A` +
     `Thank you!`;
   
     const submitReview = async () => {
