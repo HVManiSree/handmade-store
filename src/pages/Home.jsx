@@ -147,6 +147,8 @@ function Home() {
           " Hand-Painted Shirts",
           " Photo Frames",
           " Keychains",
+          " Customized Slates",
+          " Hand-Painted Pouches",
         ].map((item) => (
           <div
             key={item}
