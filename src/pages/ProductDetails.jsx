@@ -28,7 +28,7 @@ function ProductDetails() {
 
   const [customerName, setCustomerName] = useState("");
   const [customerPhone, setCustomerPhone] = useState("");
-  const [customerEmail, setCustomerEmail] = useState("");
+  const [customerAddress, setCustomerAddress] = useState("");
 
   const [reviews, setReviews] = useState([]);
   
@@ -85,7 +85,7 @@ function ProductDetails() {
     `Hello Aarkriti! 🌸%0A%0A` +
     `Name: ${customerName}%0A` +
     `Phone: ${customerPhone}%0A` +
-    `Email: ${customerEmail}%0A%0A` +
+    `Address: ${customerAddress}%0A%0A` +
     `Product: ${product.name}%0A` +
     `Price: ₹${product.price}%0A%0A` +
     `I want this product.%0A` +
@@ -230,20 +230,20 @@ function ProductDetails() {
             }}
           />
 
-          <input
-            type="email"
-            placeholder="Email Address"
-            value={customerEmail}
+        <textarea
+            placeholder="Delivery Address"
+            value={customerAddress}
             onChange={(e) =>
-              setCustomerEmail(e.target.value)
-            }
-            style={{
-              width: "100%",
-              padding: "12px",
-              marginBottom: "20px",
-              boxSizing: "border-box",
-            }}
-          />
+              setCustomerAddress(e.target.value)
+  }
+  rows="3"
+  style={{
+    width: "100%",
+    padding: "12px",
+    marginBottom: "20px",
+    boxSizing: "border-box",
+  }}
+/>
 
           <p
             style={{
@@ -280,13 +280,6 @@ function ProductDetails() {
       )}
 
       {/* REVIEWS SECTION */}
-    <h2>Customer Reviews ⭐</h2>
-      <div
-        style={{
-          marginTop: "50px",
-          textAlign: "left",
-        }}
-      >
         <h2>Customer Reviews ⭐</h2>
         <div
   style={{

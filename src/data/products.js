@@ -18,7 +18,12 @@ import shirt4 from "../assets/shirt4.jpg";
 import shirt5 from "../assets/shirt5.jpg";
 import shirt6 from "../assets/shirt6.jpg";
 import shirt7 from "../assets/shirt7.jpg";
-
+import frame2 from "../assets/frame2.jpg";
+import frame3 from "../assets/frame3.jpg";
+import frame5 from "../assets/frame5.jpg";
+import frame6 from "../assets/frame6.jpg";
+import frame7 from "../assets/frame7.webp";
+import frame8 from "../assets/frame8.jpg";
 
 const products = [
   {
@@ -34,7 +39,7 @@ const products = [
   {
     id: 3,
     name: "Photo Frame",
-    price: 699,
+    price: 499,
     image: frame,
     description: "Mini customized photo frame.",
     category: "frame",
@@ -187,6 +192,52 @@ const products = [
   description: "Unique hand-painted cotton shirt made with fabric colors.",
   category: "shirt",
 },
+{
+  id: 22,
+  name: "Photo Frame",
+  price: 699,
+  image: frame2,
+  description: "Customized photo frame.",
+  category: "frame",
+},{
+  id: 23,
+  name: "Photo Frame",
+  price: 699,
+  image: frame3,
+  description: "Customized photo frame.",
+  category: "frame",
+}
+,{
+  id: 25,
+  name: "Photo Frame",  
+  price: 699,
+  image: frame5,
+  description: "Customized photo frame.",
+  category: "frame",
+}
+,{
+  id: 26,
+  name: "Photo Frame",
+  price: 699,
+  image: frame6,
+  description: "Customized photo frame.",
+  category: "frame",
+},
+{
+  id: 27,
+  name: "Photo Frame",
+  price: 499,
+  image: frame7,
+  description: "Customized photo frame.",
+  category: "frame",
+},
+{
+  id: 28,
+  name: "Photo Frame",
+  price: 499,
+  image: frame8,
+  description: "Customized photo frame.",
+  category: "frame",
+}
 ];
-
 export default products;
