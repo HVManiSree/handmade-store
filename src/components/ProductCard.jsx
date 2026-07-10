@@ -12,11 +12,32 @@ function ProductCard({ product }) {
   return (
     <div className="product-card">
       <Link to={`/product/${product.id}`}>
-        <img
-          src={product.image}
-          alt={product.name}
-          className="product-image"
-        />
+      {product.video ? (
+  <video
+    src={product.video}
+    autoPlay
+    muted
+    loop
+    playsInline
+    style={{
+      width: "100%",
+      height: "250px",
+      objectFit: "cover",
+      borderRadius: "10px",
+    }}
+  />
+) : (
+  <img
+    src={product.image}
+    alt={product.name}
+    style={{
+      width: "100%",
+      height: "250px",
+      objectFit: "cover",
+      borderRadius: "10px",
+    }}
+  />
+)}
 
         <h3>{product.name}</h3>
 

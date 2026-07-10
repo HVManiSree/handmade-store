@@ -16,8 +16,6 @@ import {
   addDoc,
 } from "firebase/firestore";
 
-import qrImage from "../assets/qr.jpeg";
-
 function ProductDetails() {
   const { id } = useParams();
 
@@ -85,7 +83,7 @@ function ProductDetails() {
     `Hello Aarkriti! 🌸%0A%0A` +
     `Name: ${customerName}%0A` +
     `Phone: ${customerPhone}%0A` +
-    `Address: ${customerAddress}%0A%0A` +
+    `Address: ${customerAddress}%0A%0A`  +
     `Product: ${product.name}%0A` +
     `Price: ₹${product.price}%0A%0A` +
     `I want this product.%0A` +
@@ -230,20 +228,20 @@ function ProductDetails() {
             }}
           />
 
-        <textarea
-            placeholder="Delivery Address"
+          <input
+            type="address"
+            placeholder="Address"
             value={customerAddress}
             onChange={(e) =>
               setCustomerAddress(e.target.value)
-  }
-  rows="3"
-  style={{
-    width: "100%",
-    padding: "12px",
-    marginBottom: "20px",
-    boxSizing: "border-box",
-  }}
-/>
+            }
+            style={{
+              width: "100%",
+              padding: "12px",
+              marginBottom: "20px",
+              boxSizing: "border-box",
+            }}
+          />
 
           <p
             style={{
@@ -381,8 +379,7 @@ function ProductDetails() {
           ))
         )}
       </div>
-    </div>
-  );
+    );
 }
 
 export default ProductDetails;

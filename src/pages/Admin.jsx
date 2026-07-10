@@ -208,6 +208,12 @@ const deleteReview = async (
         <option value="pouch">
           Pouch
       </option>
+      <option value="craftgifts">
+           Craft Gifts
+      </option>
+      <option value="magnet">
+           Fridge Magnets
+      </option>
       </select>
 
       <br />

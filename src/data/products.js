@@ -24,6 +24,18 @@ import frame5 from "../assets/frame5.jpg";
 import frame6 from "../assets/frame6.jpg";
 import frame7 from "../assets/frame7.webp";
 import frame8 from "../assets/frame8.jpg";
+import craftbook from "../assets/craftbook.mp4";
+import craft2 from "../assets/craft2.jpg";
+import fridgemagnet from "../assets/fridgemagnet.jpg";
+import fridgemagnet2 from "../assets/fridgemagnet2.jpg";
+import fridgemagnet3 from "../assets/fridgemagnet3.jpg";
+import fridgemagnet4 from "../assets/fridgemagnet4.jpg";
+import fridgemagnet5 from "../assets/fridgemagnet5.jpg";
+import fridgemagnet6 from "../assets/fridgemagnet6.jpg";
+import fridgemagnet7 from "../assets/fridgemagnet7.jpg";
+import fridgemagnet8 from "../assets/fridgemagnet8.jpg";
+import fridgemagnet9 from "../assets/fridgemagnet9.jpg";
+import fridgemagnet10 from "../assets/fridgemagnet10.jpg";
 
 const products = [
   {
@@ -226,7 +238,7 @@ const products = [
 {
   id: 27,
   name: "Photo Frame",
-  price: 499,
+  price: 399,
   image: frame7,
   description: "Customized photo frame.",
   category: "frame",
@@ -234,10 +246,106 @@ const products = [
 {
   id: 28,
   name: "Photo Frame",
-  price: 499,
+  price: 399,
   image: frame8,
   description: "Customized photo frame.",
   category: "frame",
+},
+{
+  id: 29,
+  name: "Craft Book",
+  price: 499,
+  video: craftbook,
+  description: "A book filled with craft ideas and tutorials.",
+  category: "craftgifts",
+},
+{
+  id: 30,
+  name: "DIY Canon box",
+  price: 399,
+  image: craft2,
+  description: "A canon box filled with memories and wishes.",
+  category: "craftgifts",
+},
+{
+  id: 31,
+  name: "Fridge Magnet",
+  price: 199,
+  image: fridgemagnet,
+  description: "A cute fridge magnet made with mouldit clay.",
+  category: "magnet",
+},
+{
+  id: 32,
+  name: "Fridge Magnet",
+  price: 199,
+  image: fridgemagnet2,
+  description: "A cute fridge magnet made with mouldit clay.",
+  category: "magnet",
+},
+{
+  id: 33,
+  name: "Fridge Magnet",
+  price: 199,
+  image: fridgemagnet3,
+  description: "A cute fridge magnet made with mouldit clay.",
+  category: "magnet",
+},
+{
+  id: 34,
+  name: "Fridge Magnet",
+  price: 199,
+  image: fridgemagnet4,
+  description: "A cute fridge magnet made with mouldit clay.",
+  category: "magnet",
+},
+{
+  id: 35,
+  name: "Fridge Magnet",
+  price: 199,
+  image: fridgemagnet5,
+  description: "A cute fridge magnet made with mouldit clay.",
+  category: "magnet",
+},
+{
+  id: 36,
+  name: "Fridge Magnet",
+  price: 199,
+  image: fridgemagnet6,
+  description: "A cute fridge magnet made with mouldit clay.",
+  category: "magnet",
+},
+{
+  id: 37,
+  name: "Fridge Magnet",
+  price: 199,
+  image: fridgemagnet7,
+  description: "A cute fridge magnet made with mouldit clay.",
+  category: "magnet",
+},
+{
+  id: 38,
+  name: "Fridge Magnet",
+  price: 199,
+  image: fridgemagnet8,
+  description: "A cute fridge magnet made with mouldit clay.",
+  category: "magnet",
+},
+{
+  id: 39,
+  name: "Fridge Magnet",
+  price: 199,
+  image: fridgemagnet9,
+  description: "A cute fridge magnet made with mouldit clay.",
+  category: "magnet",
+},
+{
+  id: 40,
+  name: "Fridge Magnet",
+  price: 199,
+  image: fridgemagnet10,
+  description: "A cute fridge magnet made with mouldit clay.",
+  category: "magnet",
 }
 ];
-export default products;
+export default products; 
