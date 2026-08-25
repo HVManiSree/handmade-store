@@ -6,13 +6,25 @@ import App from "./App";
 
 import { CartProvider } from "./context/CartContext";
 import { ProductProvider } from "./context/ProductContext";
+import { WishlistProvider } from "./context/WishlistContext";
+
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 ReactDOM.createRoot(
   document.getElementById("root")
 ).render(
   <ProductProvider>
-    <CartProvider>
+  <CartProvider>
+    <WishlistProvider>
       <App />
-    </CartProvider>
-  </ProductProvider>
+  <ToastContainer
+    position="bottom-center"
+    autoClose={1800}
+    hideProgressBar
+    theme="light"
+  />
+    </WishlistProvider>
+  </CartProvider>
+</ProductProvider>
 );

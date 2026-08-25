@@ -149,7 +149,8 @@ function Home() {
           " Keychains",
           " Customized Slates",
           " Hand-Painted Pouches",
-          "Craft Gifts",
+          " Craft Gifts",
+          " Fridge Magnets",
         ].map((item) => (
           <div
             key={item}

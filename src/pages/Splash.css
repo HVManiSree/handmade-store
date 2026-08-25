@@ -1,0 +1,57 @@
+.splash-screen {
+  width: 100%;
+  height: 100vh;
+  background: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeIn 1.2s ease;
+}
+
+.logo {
+  width: 320px;
+  max-width: 80%;
+
+  animation: logoAnimation 2s ease;
+}
+
+.fade-out {
+  animation: fadeOut .6s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+@keyframes fadeOut {
+  from{
+    opacity:1;
+  }
+  to{
+    opacity:0;
+  }
+}
+
+@keyframes logoAnimation{
+
+0%{
+opacity:0;
+transform:scale(.92);
+}
+
+60%{
+opacity:1;
+transform:scale(1);
+}
+
+100%{
+transform:scale(1.02);
+}
+}
