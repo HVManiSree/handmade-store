@@ -12,6 +12,9 @@ import keychain4 from "../assets/keychain4.jpeg";
 import keychain5 from "../assets/keychain5.jpeg";
 import keychain6 from "../assets/keychain6.jpeg";
 import keychain7 from "../assets/keychain7.jpeg";
+import keychain8 from "../assets/keychain8.png";
+import keychain9 from "../assets/keychain9.png";
+import keychain10 from "../assets/keychain10.png";
 import shirt2 from "../assets/shirt2.jpg";
 import shirt3 from "../assets/shirt3.jpg";
 import shirt4 from "../assets/shirt4.jpg";
@@ -36,6 +39,11 @@ import fridgemagnet7 from "../assets/fridgemagnet7.jpg";
 import fridgemagnet8 from "../assets/fridgemagnet8.jpg";
 import fridgemagnet9 from "../assets/fridgemagnet9.jpg";
 import fridgemagnet10 from "../assets/fridgemagnet10.jpg";
+import bouque from "../assets/bouque.png";
+import deskfriendly from "../assets/deskfriendly.png";
+import deskfriendly2 from "../assets/deskfriendly2.png";
+import deskfriendly3 from "../assets/deskfriendly3.png";
+import deskfriendly4 from "../assets/deskfriendly4.png";
 
 const products = [
   {
@@ -346,6 +354,70 @@ const products = [
   image: fridgemagnet10,
   description: "A cute fridge magnet made with mouldit clay.",
   category: "magnet",
+},
+{
+  id: 41,
+  name: "Bouquet",
+  price: 279,
+  image: bouque,
+  description: "A beautiful bouquet of fresh flowers.",
+  category: "bouquet",
+},
+{
+  id: 42,
+  name: "Desk Friendly",
+  price: 199,
+  image: deskfriendly,
+  description: "A cute desk accessory made with mouldit clay.",
+  category: "deskfriendly",
+},
+{
+  id: 43,
+  name: "Desk Friendly",
+  price: 199,
+  image: deskfriendly2,
+  description: "A cute desk accessory made with mouldit clay.",
+  category: "deskfriendly",
+},
+{
+  id: 44,
+  name: "Desk Friendly",
+  price: 199,
+  image: deskfriendly3,
+  description: "A cute desk accessory made with mouldit clay.",
+  category: "deskfriendly",
+},
+{
+  id: 45,
+  name: "Desk Friendly",
+  price: 199,
+  image: deskfriendly4,
+  description: "A cute desk accessory made with mouldit clay.",
+  category: "deskfriendly",
+},
+{
+  id: 46,
+  name: "Key Chain",
+  price: 149,
+  image: keychain8,
+  description: "A cute key chain made with mouldit clay.",
+  category: "keychain", 
+},
+{
+  id: 47,
+  name: "Key Chain",
+  price: 149,
+  image: keychain9,
+  description: "A cute key chain made with mouldit clay.",
+  category: "keychain", 
+},
+{
+  id: 48,
+  name: "Key Chain",
+  price: 149,
+  image: keychain10,
+  description: "A cute key chain made with mouldit clay.",
+  category: "keychain", 
 }
 ];
 export default products; 
